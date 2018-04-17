@@ -13,4 +13,4 @@ def main():
 	args = parser.parse_args()
 	print("Mass is %s kg" % args.mass)
 	weight = converter.mass_to_weight(args.mass)
-	print("Weight is %s N" % round(weight,2))
+	print("Weight is %s N" % round(weight,3))
