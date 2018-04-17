@@ -1,9 +1,5 @@
 import argparse
-
-def mass_to_weight(mass):
-	g = 9.81
-	weight = mass * g
-	return weight
+from newton import converter
 
 def main():
 	parser = argparse.ArgumentParser(
@@ -16,5 +12,5 @@ def main():
 		required=True)
 	args = parser.parse_args()
 	print("Mass is %s kg" % args.mass)
-	weight = mass_to_weight(args.mass)
-	print("Weight is %s N" % weight)
+	weight = converter.mass_to_weight(args.mass)
+	print("Weight is %s N" % round(weight,2))
